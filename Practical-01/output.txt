@@ -1,0 +1,90 @@
+Rows x Columns : (463, 13)
+
+Column types:
+rownames         int64
+minority           str
+age              int64
+gender             str
+credits            str
+beauty         float64
+eval           float64
+division           str
+native             str
+tenure             str
+students         int64
+allstudents      int64
+prof             int64
+
+Missing values per column: 0
+Array shape      : (463, 4)
+Number of items  : 1852
+Dimensions (ndim): 2
+Data type        : float64
+Memory used      : 14816 bytes
+Selected rows (4 to 7), columns age & students:
+   age  students
+4   31        42
+5   62       182
+6   33        33
+7   51        25
+
+Matrix P (rows 4-5):
+ [[ 31.  42.]
+ [ 62. 182.]]
+
+Matrix Q (rows 6-7):
+ [[33. 33.]
+ [51. 25.]]
+P + Q:
+[[ 64.  75.]
+ [113. 207.]]
+
+P - Q:
+[[ -2.   9.]
+ [ 11. 157.]]
+
+P * Q (element-wise):
+[[1023. 1386.]
+ [3162. 4550.]]
+
+P / Q (element-wise):
+[[0.9394 1.2727]
+ [1.2157 7.28  ]]
+
+Matrix product P @ Q:
+ [[ 3165.  2073.]
+ [11328.  6596.]]
+
+Matrix product Q @ P:
+ [[3069. 7392.]
+ [3131. 6692.]]
+
+Transpose of P:
+ [[ 31.  62.]
+ [ 42. 182.]]
+
+Determinant of P : 3038.0
+Rank of P        : 2
+Inverse of P:
+ [[ 0.0599 -0.0138]
+ [-0.0204  0.0102]]
+
+Check P @ P_inv (should be identity):
+ [[ 1.  0.]
+ [-0.  1.]]
+Identity recovered: True
+            mean     std    min     max
+age       48.365   9.803  29.00   73.00
+beauty     0.000   0.789  -1.45    1.97
+eval       3.998   0.555   2.10    5.00
+students  36.624  45.018   5.00  380.00
+Categorical columns: ['minority', 'gender', 'credits', 'division', 'native', 'tenure']
+
+Shape before encoding: (463, 13)
+Shape after encoding : (463, 19)
+
+First 3 rows of the encoded columns:
+   minority_no  minority_yes  gender_female  gender_male  credits_more  credits_single  division_lower  division_upper  native_no  native_yes  tenure_no  tenure_yes
+0            0             1              1            0             1               0               0               1          0           1          0           1
+1            1             0              0            1             1               0               0               1          0           1          0           1
+2            1             0              0            1             1               0               0               1          0           1          0           1

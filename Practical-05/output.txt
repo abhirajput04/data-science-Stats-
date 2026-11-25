@@ -1,0 +1,18 @@
+Flowers measured      : 150
+Mean sepal length     : 5.8433 cm
+Sample std deviation  : 0.8281 cm
+z-score             : 0.7930
+Theoretical P(X>6.5): 0.2139  (21.39%)
+Observed    P(X>6.5): 0.2000  (20.00%)
+Difference          : 1.39 percentage points
+z-scores            : -1.0184 and 0.1892
+Theoretical P       : 0.4208  (42.08%)
+Observed P          : 0.3400  (34.00%)
+Difference          : 8.08 percentage points
+H0: mean delivery time = 32 min   |   H1: mean delivery time != 32 min
+Standard error      : 0.8944
+Z statistic         : -1.7889
+Two-tailed p-value  : 0.0736
+Critical values     : +/- 1.9600
+95% CI for the mean : (28.65, 32.15)
+Decision            : FAIL TO REJECT H0 - no significant change

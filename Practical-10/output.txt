@@ -1,0 +1,52 @@
+Samples : 569 | Measurements : 30
+Classes : {'benign': 357, 'malignant': 212}
+Missing values: 0
+                           mean      std      min       max
+mean radius              14.127    3.524    6.981    28.110
+mean texture             19.290    4.301    9.710    39.280
+mean perimeter           91.969   24.299   43.790   188.500
+mean area               654.889  351.914  143.500  2501.000
+mean smoothness           0.096    0.014    0.053     0.163
+mean compactness          0.104    0.053    0.019     0.345
+mean concavity            0.089    0.080    0.000     0.427
+mean concave points       0.049    0.039    0.000     0.201
+mean symmetry             0.181    0.027    0.106     0.304
+mean fractal dimension    0.063    0.007    0.050     0.097
+...
+Ratio of largest to smallest column mean: 232044
+Variance of each measurement (diagonal of the covariance matrix):
+mean radius                   12.4189
+mean texture                  18.4989
+mean perimeter               590.4405
+mean area                 123843.5543
+mean smoothness                0.0002
+mean compactness               0.0028
+mean concavity                 0.0064
+mean concave points            0.0015
+mean symmetry                  0.0008
+mean fractal dimension         0.0000
+Mean of scaled columns (first 5): [-0.  0. -0. -0. -0.]
+Std  of scaled columns (first 5): [1. 1. 1. 1. 1.]
+Largest eigenvalues: [13.305   5.7014  2.8229  1.9841  1.6516]
+Explained variance ratio of first 5 components: [0.4427 0.1897 0.0939 0.066  0.055 ]
+Explained variance ratio:
+  PC1: 44.27%
+  PC2: 18.97%
+  Total (2 components): 63.24%
+
+Manual eigen-decomposition matches scikit-learn (up to sign): True
+      PC1      PC2  diagnosis
+0  9.1928   1.9486  malignant
+1  2.3878  -3.7682  malignant
+2  5.7339  -1.0752  malignant
+3  7.1230  10.2756  malignant
+4  3.9353  -1.9481  malignant
+Components needed for 80% of the variance: 5
+Components needed for 90% of the variance: 7
+Components needed for 95% of the variance: 10
+Features contributing most to PC1:
+mean concave points     0.2609
+mean concavity          0.2584
+worst concave points    0.2509
+mean compactness        0.2393
+worst perimeter         0.2366

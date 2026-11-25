@@ -1,0 +1,64 @@
+Shape            : (178, 14)
+Columns          : ['alcohol', 'malic_acid', 'ash', 'alcalinity_of_ash', 'magnesium', 'total_phenols', 'flavanoids', 'nonflavanoid_phenols', 'proanthocyanins', 'color_intensity', 'hue', 'od280/od315_of_diluted_wines', 'proline', 'wine_class']
+Missing values   : 0
+Wines per class  :
+wine_class
+class_1    71
+class_0    59
+class_2    48
+Time column present : False
+Dataset type        : cross-sectional
+mean    :    746.893
+median  :    673.500
+minimum :    278.000
+maximum :   1680.000
+range   :   1402.000
+std dev :    314.907
+IQR     :    484.500
+                              count     mean      std     min      50%      max    cv_%
+alcohol                       178.0   13.001    0.812   11.03   13.050    14.83   6.245
+malic_acid                    178.0    2.336    1.117    0.74    1.865     5.80  47.816
+ash                           178.0    2.367    0.274    1.36    2.360     3.23  11.593
+alcalinity_of_ash             178.0   19.495    3.340   10.60   19.500    30.00  17.130
+magnesium                     178.0   99.742   14.282   70.00   98.000   162.00  14.319
+total_phenols                 178.0    2.295    0.626    0.98    2.355     3.88  27.269
+flavanoids                    178.0    2.029    0.999    0.34    2.135     5.08  49.223
+nonflavanoid_phenols          178.0    0.362    0.124    0.13    0.340     0.66  34.393
+proanthocyanins               178.0    1.591    0.572    0.41    1.555     3.58  35.977
+color_intensity               178.0    5.058    2.318    1.28    4.690    13.00  45.833
+hue                           178.0    0.957    0.229    0.48    0.965     1.71  23.873
+od280/od315_of_diluted_wines  178.0    2.612    0.710    1.27    2.780     4.00  27.185
+proline                       178.0  746.893  314.907  278.00  673.500  1680.00  42.162
+Mean     : 13.0006
+Median   : 13.0500
+Std dev  : 0.8118
+Skewness : -0.0515
+Kurtosis : -0.8525
+Comment: the alcohol distribution is roughly symmetric
+            wines  alcohol_mean  alcohol_std  flavanoids_mean  colour_mean
+wine_class                                                                
+class_0        59        13.745        0.462            2.982        5.528
+class_1        71        12.279        0.538            2.081        3.087
+class_2        48        13.154        0.530            0.781        7.396
+(median alcohol used as cut-off: 13.05)
+
+Counts:
+alcohol_level  high  low
+wine_class              
+class_0          57    2
+class_1           7   64
+class_2          27   21
+
+Row percentages:
+alcohol_level   high    low
+wine_class                 
+class_0        96.61   3.39
+class_1         9.86  90.14
+class_2        56.25  43.75
+Magnesium fence: [59.5, 135.5]
+Outlying wines  : 4
+   wine_class  magnesium
+69    class_1      151.0
+73    class_1      139.0
+78    class_1      136.0
+95    class_1      162.0

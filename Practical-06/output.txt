@@ -1,0 +1,43 @@
+Shape  : (1000, 8)
+Columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course', 'math_score', 'reading_score', 'writing_score']
+Completed course : mean = 74.419  (n = 358)
+No course        : mean = 64.505  (n = 642)
+t statistic      : 10.7525
+p-value          : 2.663e-25
+Cohen's d        : 0.698
+Decision         : REJECT H0 -> the course is linked to different writing scores
+group A : mean = 64.674  (n = 89)
+group B : mean = 67.353  (n = 190)
+group C : mean = 69.103  (n = 319)
+group D : mean = 70.031  (n = 262)
+group E : mean = 73.029  (n = 140)
+
+F statistic      : 5.6217
+p-value          : 1.780e-04
+Eta squared      : 0.0221
+Decision         : REJECT H0 -> at least one group mean differs
+Pairs significantly different after Tukey HSD (p < 0.05):
+  group A vs group D: p = 0.0219
+  group A vs group E: p = 0.0002
+  group B vs group E: p = 0.0041
+Observed counts:
+test_preparation_course  completed  none
+gender                                  
+female                         184   334
+male                           174   308
+
+Expected counts under independence:
+test_preparation_course  completed    none
+gender                                    
+female                      185.44  332.56
+male                        172.56  309.44
+
+Chi-square       : 0.0155
+Degrees of freedom: 1
+p-value          : 0.9008
+Cramer's V       : 0.0039
+Decision         : FAIL TO REJECT H0 -> no significant association
+Pearson r        : 0.9546   (p = < 1e-300)
+Spearman rho     : 0.9490   (p = < 1e-300)
+Interpretation   : very strong positive relationship
+Decision         : REJECT H0 -> scores are significantly correlated

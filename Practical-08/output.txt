@@ -1,0 +1,88 @@
+Students           : 1000
+Standard lunch     : 645
+Free/reduced lunch : 355
+Majority-class baseline accuracy: 0.645
+Number of features after encoding: 14
+Training set: (800, 14) | Test set: (200, 14)
+Share of free/reduced lunch  train: 0.355  test: 0.355
+                                          mutual_info  correlation
+math_score                                     0.0690      -0.3686
+reading_score                                  0.0504      -0.2377
+test_preparation_course_none                   0.0398      -0.0255
+race_ethnicity_group B                         0.0269       0.0311
+writing_score                                  0.0220      -0.2533
+race_ethnicity_group E                         0.0084      -0.0486
+parental_level_of_education_high school        0.0083       0.0013
+parental_level_of_education_some college       0.0032       0.0217
+(max_depth 0 means 'no limit')
+criterion  max_depth  train_acc  cv_acc  test_acc
+  entropy          2      0.709   0.696     0.700
+  entropy          3      0.718   0.696     0.670
+  entropy          4      0.721   0.675     0.685
+  entropy          5      0.736   0.674     0.690
+  entropy          6      0.765   0.668     0.675
+  entropy          0      0.999   0.599     0.590
+     gini          2      0.709   0.696     0.700
+     gini          3      0.718   0.699     0.670
+     gini          4      0.721   0.681     0.685
+     gini          5      0.738   0.658     0.680
+     gini          6      0.772   0.658     0.670
+     gini          0      0.999   0.591     0.605
+
+Chosen by 5-fold cross-validation on the training data: gini, max_depth = 3
+Training accuracy: 0.718
+Test accuracy    : 0.670
+
+Confusion matrix (rows = actual, columns = predicted):
+[[119  10]
+ [ 56  15]]
+
+              precision    recall  f1-score   support
+
+    standard       0.68      0.92      0.78       129
+free/reduced       0.60      0.21      0.31        71
+
+    accuracy                           0.67       200
+   macro avg       0.64      0.57      0.55       200
+weighted avg       0.65      0.67      0.62       200
+
+|--- math_score <= 50.50
+|   |--- math_score <= 39.50
+|   |   |--- race_ethnicity_group E <= 0.50
+|   |   |   |--- class: 1
+|   |   |--- race_ethnicity_group E >  0.50
+|   |   |   |--- class: 0
+|   |--- math_score >  39.50
+|   |   |--- writing_score <= 43.50
+|   |   |   |--- class: 0
+|   |   |--- writing_score >  43.50
+|   |   |   |--- class: 1
+|--- math_score >  50.50
+|   |--- math_score <= 79.50
+|   |   |--- math_score <= 66.50
+|   |   |   |--- class: 0
+|   |   |--- math_score >  66.50
+|   |   |   |--- class: 0
+|   |--- math_score >  79.50
+|   |   |--- reading_score <= 65.00
+|   |   |   |--- class: 1
+|   |   |--- reading_score >  65.00
+|   |   |   |--- class: 0
+
+Entropy of the training labels: 0.9385
+Gini of the training labels   : 0.4579
+
+               feature  info_gain  threshold
+            math_score     0.0681       50.5
+         writing_score     0.0475       66.5
+         reading_score     0.0398       68.5
+race_ethnicity_group E     0.0017        0.5
+           gender_male     0.0011        0.5
+race_ethnicity_group B     0.0007        0.5
+scikit-learn root split : math_score <= 50.50
+My calculation          : math_score <= 50.50
+
+Left child : n=123  (free/reduced=87), entropy=0.8722, gini=0.4140
+Right child: n=677  (free/reduced=197), entropy=0.8700, gini=0.4126
+Information gain = 0.9385 - 0.8703 = 0.0681
+Gini reduction   = 0.4579 - 0.4128 = 0.0451

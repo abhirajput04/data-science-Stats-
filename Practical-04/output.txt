@@ -1,0 +1,36 @@
+Full table shape : (569, 31)
+   mean radius  mean texture  mean area  mean concavity  diagnosis
+0        17.99         10.38     1001.0          0.3001  malignant
+1        20.57         17.77     1326.0          0.0869  malignant
+2        19.69         21.25     1203.0          0.1974  malignant
+3        11.42         20.38      386.1          0.2414  malignant
+4        20.29         14.34     1297.0          0.1980  malignant
+Exact duplicate rows            : 0
+Duplicates on radius/texture/area: 0
+Rows before / after cleaning    : 569 / 569
+       mean radius  mean texture  mean area  mean concavity
+count      569.000       569.000    569.000         569.000
+mean        14.127        19.290    654.889           0.089
+std          3.524         4.301    351.914           0.080
+min          6.981         9.710    143.500           0.000
+25%         11.700        16.170    420.300           0.030
+50%         13.370        18.840    551.100           0.062
+75%         15.780        21.800    782.700           0.131
+max         28.110        39.280   2501.000           0.427
+
+Samples per diagnosis:
+diagnosis
+benign       357
+malignant    212
+             mean     std
+diagnosis                
+benign     462.79  134.29
+malignant  978.38  367.94
+Correlation between radius and concavity: 0.677
+benign     mean radius = 12.15, mean concavity = 0.046
+malignant  mean radius = 17.46, mean concavity = 0.161
+diagnosis  texture_level
+benign     rough            119
+           smooth           238
+malignant  rough            166
+           smooth            46

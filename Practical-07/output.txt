@@ -1,0 +1,34 @@
+Patients: 442 | outcome variable: progression (mean 152.1)
+OLS: progression ~ bp_level
+                    coef std err        t     P>|t|
+Intercept       126.8841  4.7436  26.7486  2.72e-94
+bp_level[high]   53.3982  6.8983   7.7407  6.85e-14
+n = 442   R-squared = 0.1199   Adj. R-squared = 0.1179
+F = 59.9189   Prob(F) = 6.845e-14
+
+H0: mean progression is the same for both blood-pressure levels
+Decision: REJECT H0
+High-BP patients progress by 53.40 points more on average
+           count    mean    std
+age_group                      
+under 40     122  25.385  4.915
+40-55        177  26.346  4.289
+over 55      143  27.258  3.952
+
+            df       sum_sq     mean_sq         F         p
+age_group    2   231.169956  115.584978  6.057232  0.002541
+Residual   439  8377.061016   19.082144       NaN       NaN
+
+SciPy cross-check: F = 6.0572, p = 2.541e-03
+Decision: REJECT H0 - BMI differs across age groups
+OLS: progression ~ bmi
+               coef  std err        t     P>|t|
+Intercept -117.7734  18.0189  -6.5361  1.75e-10
+bmi         10.2331   0.6738  15.1873  3.47e-42
+n = 442   R-squared = 0.3439   Adj. R-squared = 0.3424
+F = 230.6538   Prob(F) = 3.466e-42
+
+SciPy cross-check: slope = 10.2331, intercept = -117.7734, r = 0.5865
+Each extra BMI point is associated with 10.23 more progression points.
+Q1 model explains 12.0% of the variation in progression
+Q3 model explains 34.4% of the variation in progression

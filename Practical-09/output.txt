@@ -1,0 +1,80 @@
+Samples : 178 | Features : 13
+Class counts:
+wine_class
+class_0    59
+class_1    71
+class_2    48
+
+Average of four key measurements per class:
+            alcohol  flavanoids  color_intensity   proline
+wine_class                                                
+class_0      13.745       2.982            5.528  1115.712
+class_1      12.279       2.081            3.087   519.507
+class_2      13.154       0.781            7.396   629.896
+Training samples: 133 | Test samples: 45
+K=5 accuracy without scaling: 0.6667
+K=5 accuracy with scaling   : 0.9778
+Confusion matrix (rows = actual, columns = predicted):
+         class_0  class_1  class_2
+class_0       15        0        0
+class_1        0       17        1
+class_2        0        0       12
+
+Accuracy: 0.9778
+
+              precision    recall  f1-score   support
+
+     class_0       1.00      1.00      1.00        15
+     class_1       1.00      0.94      0.97        18
+     class_2       0.92      1.00      0.96        12
+
+    accuracy                           0.98        45
+   macro avg       0.97      0.98      0.98        45
+weighted avg       0.98      0.98      0.98        45
+
+K =  1  ->  cross-validated error = 0.0672
+K =  2  ->  cross-validated error = 0.0821
+K =  3  ->  cross-validated error = 0.0670
+K =  4  ->  cross-validated error = 0.0744
+K =  5  ->  cross-validated error = 0.0667
+K =  6  ->  cross-validated error = 0.0593
+K =  7  ->  cross-validated error = 0.0444
+K =  8  ->  cross-validated error = 0.0744
+K =  9  ->  cross-validated error = 0.0519
+K = 10  ->  cross-validated error = 0.0670
+K = 11  ->  cross-validated error = 0.0519
+K = 12  ->  cross-validated error = 0.0593
+K = 13  ->  cross-validated error = 0.0593
+K = 14  ->  cross-validated error = 0.0667
+K = 15  ->  cross-validated error = 0.0519
+K = 16  ->  cross-validated error = 0.0519
+K = 17  ->  cross-validated error = 0.0370
+K = 18  ->  cross-validated error = 0.0370
+K = 19  ->  cross-validated error = 0.0370
+K = 20  ->  cross-validated error = 0.0370
+K = 21  ->  cross-validated error = 0.0370
+K = 22  ->  cross-validated error = 0.0370
+K = 23  ->  cross-validated error = 0.0370
+K = 24  ->  cross-validated error = 0.0444
+K = 25  ->  cross-validated error = 0.0444
+K = 26  ->  cross-validated error = 0.0444
+K = 27  ->  cross-validated error = 0.0444
+K = 28  ->  cross-validated error = 0.0444
+K = 29  ->  cross-validated error = 0.0370
+K = 30  ->  cross-validated error = 0.0444
+Lowest cross-validated error: 0.037
+K values that reach it      : [17, 18, 19, 20, 21, 22, 23, 29]
+Chosen K (smallest odd one) : 17
+Test accuracy with K = 17: 0.9778
+
+First test wine - true class: class_0 | predicted: class_0
+Its 5 nearest training wines:
+   distance 1.328  ->  class_0
+   distance 1.540  ->  class_0
+   distance 1.891  ->  class_0
+   distance 2.298  ->  class_0
+   distance 2.338  ->  class_0
+euclidean  test accuracy = 0.9778
+manhattan  test accuracy = 0.9556
+chebyshev  test accuracy = 0.9333
+Accuracy using only ['flavanoids', 'color_intensity']: 0.9556
